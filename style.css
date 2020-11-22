@@ -1,0 +1,473 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-size: 20px;
+    font-family: 'Titillium Web', sans-serif;
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    overflow-x: hidden;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.brand #logo{
+    padding: 0.5em;
+    margin-left: 3rem;
+}
+.brand a{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2em;
+    color: white;
+}
+.submenus{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 35%;
+    padding-right: 30px;
+}
+.submenus a{
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+}
+.submenus a:hover{
+    background-color: rgb(238, 226, 226);
+    color:  #302b63;
+    padding: 10px;
+    border-radius: 20px;
+}
+.menuIcon{
+    display: none;
+    padding-right: 20px;
+}
+
+.menuIcon div{
+    width: 40px;
+    height: 6px;
+    margin: 5px;
+    background-color: white;
+}
+.menuIcon .line{
+    border: 1px solid white;
+    border-radius: 1rem;
+}
+#mySidenav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    border-radius: 30px; 
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 20px;
+}
+#mySidenav a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+#mySidenav a:hover{
+    color: #f1f1f1;
+}
+#mySidenav .closebtn{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+/*Upside is just header and reseting codes. Don't Touch it*/
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 0.7fr 20px;
+    grid-template-areas: 
+        "home home home"
+        "about about about"
+        "projects projects projects"
+        ". contact ."
+        "footer footer footer";
+}
+.home{
+    grid-area: home;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.home h1{
+    font-weight: 500;
+    font-size: 4rem;
+    color: white;
+}
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    grid-area: about;
+    margin: 0 200px;
+    height: 100vh;
+    text-align: center;
+}
+.about p{
+    font-size: 30px;
+    letter-spacing: 3px;
+    font-weight: 500;
+    line-height: 2.5rem;
+    color: rgb(233, 244, 248);
+}
+/*
+.about .aboutGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1;
+    grid-template-areas: "aboutgrid aboutphoto";
+    grid-gap: 70px;
+    padding-left: 30rem;
+    padding-top: 10rem;
+}
+.about .aboutGrid .aboutinformation{
+    grid-area: aboutgrid;
+    text-align: center;
+}
+.about .aboutGrid .aboutphoto{
+    grid-area: aboutphoto;
+}
+.aboutphoto img{
+    border-radius: 50%;
+}
+*/
+.projects{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr;
+    grid-template-areas: 
+            "firstrowofprojects firstrowofprojects"
+            "secondrowofprojects secondrowofprojects";
+    grid-area: projects;
+    margin: auto;
+    padding-top: 10rem;
+}
+.firstrowofprojects{
+    display: flex;
+    grid-area: firstrowofprojects;
+}
+.secondrowofprojects{
+    display: flex;
+    grid-area: secondrowofprojects;
+}
+.flipCards h2{
+   text-align: center;
+}
+.projects h2{
+    margin-bottom: 3rem;
+}
+.projects h2 a{
+    text-decoration: none;
+    color: white;
+}
+.projects h2 a:hover{
+    background-color: #d6d6d6;
+    color: #0d0a2b;
+    border: 1px solid #0d0a2b;
+    border-radius: 15px;
+    transition: border-radius 1s;
+}
+
+.contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: 10rem;
+    grid-area: contact;
+    margin-top: 15rem;
+}
+.contact #mail{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+.contact #phone{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.contact #mail a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.17em;
+    font-weight: bold;
+    padding-top: 3rem;
+}
+.contact #phone h3{
+    padding-top: 3rem;
+}
+.footer{
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    grid-area: footer;
+    margin-bottom: 30px;
+}
+.footer a{
+    display: flex;
+    text-decoration: none;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer a i{
+    text-align: center;
+}
+.footer a p{
+    margin: 20px;
+}
+
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    width: 400px;
+    height: 400px;
+    padding: 30px;
+    z-index: 1;
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: rgb(255, 255, 255);
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+  }
+  .flip-card-back a{
+    font-family: 'Titillium Web', sans-serif;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  .flip-card-back h1{
+      margin-bottom: 50px;
+  }
+
+
+
+/*------------------------------------------------------ */
+  .scrolling-active{
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 3px 1rem rgba(0,0,0, 0.3);
+    transition:1.5s;
+}
+.scrolling-active .submenus{
+    padding-bottom: 15px;
+}
+.scrolling-active .submenus a{
+    color: #0d0a2b;
+}
+.scrolling-active .brand{
+    padding-bottom: 15px;
+}
+.scrolling-active .brand #logo{
+    color: #0d0a2b;
+}
+
+
+@media screen and (max-width: 1150px){
+    .submenus{
+        display: none;
+    }
+    .menuIcon{
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 1000px){
+    .home{
+        display: flex;
+        flex-direction: column;
+    }
+    .home h1{
+        text-align: center;
+    }
+    .about{
+        text-align: center;
+        margin-top: 10px;
+    }
+    .about h2{
+        display: block;
+    }
+    .about p{
+        width: 300px;
+    }
+    .projects{
+        padding-top: 0px;
+    }
+    .projects .firstrowofprojects{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .projects .secondrowofprojects{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .contact{
+        margin-top: 35rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .contact .mail{
+        margin-bottom: 65px;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 20rem;
+        margin-bottom: 50px;
+    }
+    /*------------------------------------------------------ */
+    .scrolling-active{
+        background-color: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 3px 1rem rgba(0,0,0, 0.3);
+        transition:1.5s;
+    }
+    .scrolling-active .submenus{
+        padding-bottom: 15px;
+    }
+    .scrolling-active .submenus a{
+        color: black;
+    }
+    .scrolling-active .brand{
+        padding-bottom: 15px;
+    }
+    .scrolling-active .brand #logo{
+        color: black;
+    }
+    .scrolling-active .menuIcon{
+        padding-bottom: 15px;
+    }
+    .scrolling-active .menuIcon div{
+        background-color: black;
+        
+    }
+    .scrolling-active .menuIcon .line{
+        border: 1px solid black;
+    }
+}
+    /*
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 0.7fr 20px;
+        justify-content: center;
+    }
+    .home h1{
+        font-size: 3rem;
+    }
+    .about{
+        text-align: center;
+    }
+    .projects{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 0.5fr;
+        margin: auto;
+        padding-top: 10rem;
+    }
+    .firstrowofprojects{
+        display: flex;
+        flex-direction: column;
+    }
+    .secondrowofprojects{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .contact{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 10rem;
+        grid-area: contact;
+        margin-top: 20rem;
+        margin-right: 45px;
+    }
+    */
+
+

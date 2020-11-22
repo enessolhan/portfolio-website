@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <title>Enes SOLHAN </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.0/css/all.css"
+        integrity="sha384-OLYO0LymqQ+uHXELyx93kblK5YIS3B2ZfLGBmsJaUyor7CpMTBsahDHByqSuWW+q" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <header>
+            <div class="brand">
+                <a href="/index.html"><i id="logo" class="fas fa-code fa-lg"></i></i></a>
+            </div>
+            <ul class="submenus">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#project-section">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">Resume</a></li>
+            </ul>
+             <span class="menuIcon">
+                  <a  onclick="openNav()">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                  </a>
+            </span>
+            <div id="mySidenav" class="sidenav">
+                <a class="closebtn" onclick="closeNav()"><i class="fas fa-times"></i></a>
+                <a href="#home">Home</a>
+                <a href="#project-section">Projects</a>
+                <a href="#contact">Contact</a>
+                <a href="#">Resume</a>
+            </div>
+    </header>
+
+    <section class="container">
+        <div class="home" id="home">
+            <h1>Hi, I'm Enes</h1>
+            <h1 class="typewrite" data-period="2000" data-type='[ "Web Developer" ]'></h1>
+        </div>
+
+        <div class="about" id="about">
+              <h2>About Me</h2>
+              <p>I am Enes SOLHAN, Full-Stack Web Developer. I graduated with Mechanical Engineering degree in 2018 from University of Turkish Aeronautical Association University. I had worked in Appen.com between 2018-2020 in different kind of projects. At the same time, I studied Java language because I have previous experience with Java from University. While doing all these things, I started to create my own website which is Teknovv.com and I opened the website at the end of the February in 2019. I gained 20k visitors monthly. However, I really wanted to create my own website from scratch, then I started Colt's Full-Stack web developer course in Udemy, and I successfully finished the course, and I created couple projects which I learned from the course. Right now, I want to start a job as a full-stack web develeper. Excellent problem-solving skills and ability to perform well in a team. I finished the Udemy courses, and I gained my skills. Seeking to develop or help on your product as a web developer, as well as grow and develop my own skills as a coder. You can download my resume, view the github account or social media account if you want to look my codes.</p>
+            </div>
+        <div class="projects" id="project-section">
+            <div class="flipCards">
+              <h2>Projects</h2>
+                <div class="firstrowofprojects">
+                  <div class="flip-card">
+                      <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                          <img src="img/scoreKeeper.JPG" alt="Avatar" style="width:340px; height:340px;">
+                        </div>
+                        <div class="flip-card-back">
+                          <h1>Score Keeper Game</h1>
+                          <a href="https://github.com/enessolhan/scorekeeper" target="_blank">Source Code</a>
+                          <a href="https://enessolhan.github.io/scorekeeper/" target="_blank">Live</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flip-card">
+                      <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                          <img src="img/candyWebsite.JPG" alt="Avatar" style="width:340px;height:340px;">
+                        </div>
+                        <div class="flip-card-back">
+                          <h1>Bootstrap Website</h1>
+                          <a href="https://github.com/enessolhan/candy.github.io" target="_blank">Source Code</a>
+                          <a href="https://enessolhan.github.io/candy.github.io/" target="_blank">Live</a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="secondrowofprojects">
+                    <div class="flip-card">
+                      <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                          <img src="img/movieApi.JPG" alt="Avatar" style="width:340px;height:340px;">
+                        </div>
+                        <div class="flip-card-back">
+                          <h1>Movie API</h1>
+                          <a href="https://github.com/enessolhan/MovieAPI" target="_blank">Source Code</a>
+                          <a href="https://enessolhan.github.io/MovieAPI/" target="_blank">Live</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flip-card">
+                      <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                          <img src="img/colorGame.JPG" alt="Avatar" style="width:340px;height:340px;">
+                        </div>
+                        <div class="flip-card-back">
+                          <h1>Color Game</h1>
+                          <a href="https://github.com/enessolhan/colorgame"target="_blank">Source Code</a>
+                          <a href="https://enessolhan.github.io/colorgame/" target="_blank">Live</a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <h2 class="more"><a href="https://github.com/enessolhan?tab=repositories" target="_blank">More Projects</a></h2>
+            </div>
+        </div>
+        <div class="contact" id="contact">
+            <div class="mail" id="mail">
+              <i class="fas fa-at fa-3x"></i>
+              <a href="mailto:enessolhan@gmail.com">enessolhan@gmail.com</a>
+            </div>
+            <div id="phone">
+              <i class="fas fa-phone fa-3x"></i>
+              <h3>Phone : +90 554 440 65 45</h3>
+            </div>
+        </div>
+        <div class="footer">
+          <a href="https://www.linkedin.com/in/enes-solhan-3879a0107/" target="_blank"><i class="fab fa-linkedin fa-2x"></i><p class="social">Linkedin</p></a>
+          <a href="https://github.com/enessolhan" target="_blank"><i class="fab fa-github fa-2x"></i><p class="social">Github</p></a>
+          <a href="https://www.instagram.com/enessolhan/" target="_blank"><i class="fab fa-instagram fa-2x"></i><p class="social">Instagram</p></a>
+          <a href="https://twitter.com/enessolh" target="_blank"><i class="fab fa-twitter-square fa-2x"></i><p class="social">Twitter</p></a>
+        </div>
+    </section>
+
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+        </script>
+    <script src="app.js"></script>
+</body>
+</html>
